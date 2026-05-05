@@ -1,0 +1,1 @@
+import { LightningElement } from 'lwc'; export default class EnrollmentScoreCard extends LightningElement {}
