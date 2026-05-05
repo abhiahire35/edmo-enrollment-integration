@@ -1,1 +1,16 @@
-<template><p>Enrollment Score Card</p></template>
+<template>
+    <template if:true={scoreData}>
+        <div class="card">
+            <p><b>Score:</b> {scoreData.Score__c}</p>
+            <p><b>Action:</b> {scoreData.Recommended_Action__c}</p>
+            <p><b>Source:</b> {scoreData.Source_System__c}</p>
+            <p><b>Date:</b> {scoreData.Scored_At__c}</p>
+
+            <span class={badgeClass}>Priority</span>
+        </div>
+    </template>
+
+    <template if:false={scoreData}>
+        <p>No enrollment score available yet</p>
+    </template>
+</template>
